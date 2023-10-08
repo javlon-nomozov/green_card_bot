@@ -467,7 +467,9 @@ Tug'ilgan joy: {ch_country[i]}>{ch_city[i]};
             await state.update_data(price=price)
         await state.update_data(messages=messages)
         # print(messages)
-        await message.answer(f"<b>Raxma</b>\nAnketa to'ldirilishi nixoyasiga yetdi \n!!!Iltimos malumotlaringizni tekshiring!!! \nva<b> keyin {price} so'm yoki {price*0.017} rubl tlo'langanligi to'lov qog'ozini(chekni) yuboring</b>"
+        await message.answer(f"<b>Raxma</b>\nAnketa to'ldirish nixoyasiga yetdi \n!!!Iltimos malumotlaringizni tekshiring!!! \n"
+                             "\nUmirzaqov Isomiddin Salohiddin Ugli:\nSberbank:\n<code>2202 2025 6604 2721</code>\n\nUzcard:<code>8600 1404 0792 0868</code>\n\n"
+                             f"<b>{price} so'm yoki {price*0.017} rubl to'langanligi to'lov qog'ozini(chekni) yuboring</b>"
                              " keyin uni hodimlar ko'rib chiqib, agarda xatolik mavjud bo'lsa sizga bog'lanishadi")
         await Anketa.bill.set()
     else:
@@ -493,7 +495,7 @@ async def bot_echo(message: types.Message, state: FSMContext):
         await bot.send_photo(chat_id=-1001896668985, photo=el['photo'], caption=el['text'])
     await bot.send_photo(chat_id=-1001896668985, photo=message.photo[-1].file_id ,caption=f"ID: {id} uchun to'lov cheki: summa: {price}so'm yoki {price*0.017} rubl")
     await state.finish()
-    await message.answer("Anketa to'ldirish nixoyasiga yetdi. Bizning hizmatimizdan foydalanganingiz uchun raxmat", default_key.remove_key)
+    await message.answer("Anketa to'ldirish tugatildi. Bizning hizmatimizdan foydalanganingiz uchun raxmat", default_key.remove_key)
     
     # await message.answer_photo(photo=photo, caption=f"anketa kodi: #{id} {phone_num}, {fname}, {lname}, {birth_year}, {birth_month}, {birth_day}, {birth_city}, {birth_country}")
 

@@ -502,3 +502,8 @@ async def bot_echo(message: types.Message, state: FSMContext):
 async def bot_echo(message: types.Message, state: FSMContext):
     await message.answer("Chek rasm formatida bo'lishi kerak:")
 
+
+@dp.message_handler()
+async def bot_echo(message: types.Message):
+    await message.answer("/shartlar bilan tanishib chiqing va keyin /anketa to'ldiring")
+

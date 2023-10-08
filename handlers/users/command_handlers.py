@@ -18,7 +18,7 @@ translator = Translator()
 
 @dp.message_handler(text='Bekor qilish')
 @dp.message_handler(commands='cancel')
-async def cancel():
+async def cancel(message: Message):
     pass
     # await state.finish()
     # await msg.answer('Ism kiriting')
@@ -28,6 +28,18 @@ async def cancel():
 async def cancel(msg: Message, state: FSMContext):
     await state.finish()
     await msg.answer('Anketa bekor qilindi\n\nYangi boshlash uchun: /anketa')
+
+
+@dp.message_handler(commands=['count_users'])
+async def count_users(message: Message):
+    # Get the bot information
+    await message.answer('Works')
+    bot_info = await bot.get_me()
+    # Get the number of bot users
+    bot_users_count = bot_info.num_bot_users
+
+    # Send the count to the user
+    await message.reply(f"Total number of bot users: {bot_users_count}")
 
 
 @dp.message_handler(commands='shartlar')

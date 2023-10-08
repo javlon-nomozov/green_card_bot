@@ -24,8 +24,8 @@ async def start(msg: types.Message):
     
     await msg.answer(f"Salom hurmatli {msg.from_user.full_name}\n\n"
                     f"!⚠️Diqqat⚠️! bot orqali Green Card anketasini to`ldirishdan oldin foydalanish /shartlar bilan tanishing.\n"
-                    "Anketa to'ldirish pulli.\n\nYakka bo`ydoq 8 000 so`m, yoki 68 rubl "
-                    "Oilaviy anketaga qolgan har bir odam uchun 4 000 so'm yoki 34 rubl dan\n\n"
+                    "Anketa to'ldirish pulli.\n\nYakka bo`ydoq 8 000 so`m, yoki 136.0 rubl "
+                    "Oilaviy anketaga qolgan har bir odam uchun 4 000 so'm yoki 68.0 rubl dan\n\n"
                     "To'lov anketa to'ldirilgandan keyin amalga oshirilishi shart.\n"
                     "To`lovni amalga oshirilmagan anketalar ro'yxatdan o'tkazilmaydi.\n\n"
                     "Agar /shartlar ga rozi bo'lsangiz /anketa to'ldirishni boshlashingiz mumkin")

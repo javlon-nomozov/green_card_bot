@@ -30,18 +30,6 @@ async def cancel(msg: Message, state: FSMContext):
     await msg.answer('Anketa bekor qilindi\n\nYangi boshlash uchun: /anketa')
 
 
-@dp.message_handler(commands=['count_users'])
-async def count_users(message: Message):
-    # Get the bot information
-    await message.answer('Works')
-    bot_info = await bot.get_me()
-    # Get the number of bot users
-    bot_users_count = bot_info.num_bot_users
-
-    # Send the count to the user
-    await message.reply(f"Total number of bot users: {bot_users_count}")
-
-
 @dp.message_handler(commands='shartlar')
 async def privacy(msg: Message):
     await msg.answer("!⚠️Diqqat⚠️!\n\nIshtirok etish shartlari:\n\n1️⃣Kodi sizga berilmaydi... (Agar yutadigan bo'lsangiz biz o'zimiz siz bilan bog'lanamiz va visa uchun hujjatlar tayyorlashda ham yordam beramiz.)\n\n2️⃣Botdan chiqib ketmaslikga harakat qiling... (agarda siz bergan tel nomer ish faoliyatidan toxtaydigan bolsa siz bilan boglana olmaymiz.)\n\n"

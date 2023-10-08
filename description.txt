@@ -1,1 +1,5 @@
 yangi chat qo'shilganida o'zi reboot qiladigan (o'chib yonadigan) qilinishi kerak
+
+
+
+data = {'ch_fname': ['fname', 'Jo', 'John'], 'ch_lname': ['lname', 'McNeil', 'Doe'], 'ch_birth_year': ['birth_year'], 'ch_birth_month': ['birth_month'], 'ch_birth_day': ['birth_day'], 'ch_birth_city': ['birth_city'], 'ch_birth_country': ['birth_country'], 'ch_photo': ['photo', 'AgACAgIAAxkBAAIr0WUb6GBLIxxtMtmLcershAmS-kp3AAKMzzEbXHXgSGzR_z_1inohAQADAgADeAADMAQ'], 'phone_num': '+998991234567', 'fname': 'Javlon', 'lname': 'Erkak', 'birth_year': 2020, 'birth_month': 'Fevral', 'birth_day': '12', 'birth_city': 'Some city', 'birth_country': 'Some countr', 'photo': 'AgACAgIAAxkBAAIrr2Ub583ykyXgrL4UKrLOfS5Hhr8_AAKIzzEbXHXgSFqj6223Glt0AQADAgADeAADMAQ', 'edu_grade': 'Tugalanmagan oliy', 'marriage_state': 'Turmush qurgan', 'session_num': 1, 'child_count': 1}

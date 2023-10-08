@@ -16,33 +16,21 @@ translator = Translator()
 # /donate - qo'llab quvvatlovchilar uchun karta raqami
 
 
+@dp.message_handler(text='Bekor qilish')
 @dp.message_handler(commands='cancel')
-async def cancel(msg: Message):
+async def cancel():
     pass
     # await state.finish()
     # await msg.answer('Ism kiriting')
 
 @dp.message_handler(commands='cancel', state="*")
+@dp.message_handler(text='Bekor qilish', state="*")
 async def cancel(msg: Message, state: FSMContext):
     await state.finish()
-    await msg.answer('bekor qilindi')
+    await msg.answer('Anketa bekor qilindi\n\nYangi boshlash uchun: /anketa')
 
 
-@dp.message_handler(commands="community", state="*")
-async def comunity(msg: Message):
-    text = translator.translate(text="Taklif va murojatlar uchun Community gruppa").text
-
-    await msg.reply(f"{text}\n<a href='t.me/wiki_tobot_community'>Wikipedia Community</a>")
-
-
-@dp.message_handler(commands="donate", state="*")
-async def donate(msg: Message):
-    text = translator.translate(text="Qo'llab quvvatlovchilar uchun:").text
-
-    await msg.reply(f"{text}\nVisa card: 4023 0602 3763 4653 \nUnionPay: 6210 4501 9045 9206 ")
-
-
-
-
-
-
+@dp.message_handler(commands='shartlar')
+async def privacy(msg: Message):
+    await msg.answer("!⚠️Diqqat⚠️!\n\nIshtirok etish shartlari:\n\n1️⃣Kodi sizga berilmaydi... (Agar yutadigan bo'lsangiz biz o'zimiz siz bilan bog'lanamiz va visa uchun hujjatlar tayyorlashda ham yordam beramiz.)\n\n2️⃣Botdan chiqib ketmaslikga harakat qiling... (agarda siz bergan tel nomer ish faoliyatidan toxtaydigan bolsa siz bilan boglana olmaymiz.)\n\n"
+                     "3️⃣Telegram mavjud bolgan nomer kiritishingizni sorab qolamiz... (bu majburiy emas, lekin, sizdagi berilgan ma'lumotlarda royxatdan otgazishiga vaqtida qandaydir hatolik yuzaga kelsa siz bilan boglanishosonroq bo'ladi.)\n\n<b>Agar barcha shartlarga rozi bo'lsangiz /anketa to'ldirishingiz mumkin</b>")

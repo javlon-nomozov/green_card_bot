@@ -17,5 +17,4 @@ async def bot_help_for_admin(message: types.Message):
 
 @dp.message_handler(CommandHelp(), state=None)
 async def bot_help_for_admin(message: types.Message):
-    await message.answer("Ismingizni kiriting va sizga unga mos video topib beraman")
-
+    await message.answer("Green card /anketa sini to'ldiruvchi bot")

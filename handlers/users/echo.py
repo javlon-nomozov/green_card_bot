@@ -467,7 +467,9 @@ Tug'ilgan joy: {ch_country[i]}>{ch_city[i]};
             await state.update_data(price=price)
         await state.update_data(messages=messages)
         # print(messages)
-        await message.answer(f"<b>Raxma</b>\nAnketa to'ldirilishi nixoyasiga yetdi \n!!!Iltimos malumotlaringizni tekshiring!!! \nva<b> keyin {price} so'm yoki {price*0.017} rubl tlo'langanligi to'lov qog'ozini(chekni) yuboring</b>"
+        await message.answer(f"<b>Raxma</b>\nAnketa to'ldirish nixoyasiga yetdi \n!!!Iltimos malumotlaringizni tekshiring!!! \n"
+                             "\nUmirzaqov Isomiddin Salohiddin Ugli:\nSberbank:\n<code>2202 2025 6604 2721</code>\n\nUzcard:<code>8600 1404 0792 0868</code>\n\n"
+                             f"<b>{price} so'm yoki {price*0.017} rubl to'langanligi to'lov qog'ozini(chekni) yuboring</b>"
                              " keyin uni hodimlar ko'rib chiqib, agarda xatolik mavjud bo'lsa sizga bog'lanishadi")
         await Anketa.bill.set()
     else:
